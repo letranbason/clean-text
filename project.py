@@ -13,7 +13,7 @@ def detect_language(text):
     else:
         return 'english'
 
-# Hàm để làm sạch và tiền xử lý văn bản
+
 def clean_text(text, language):
     text = text.lower()
     if language == 'english':
@@ -25,14 +25,3 @@ def clean_text(text, language):
     
     words = [word for word in words if word not in stop_words]
     return " ".join(words)
-
-# Yêu cầu người dùng nhập văn bản
-# user_input = input("Please enter a text for analysis: ")
-# language = detect_language(user_input)
-
-# Áp dụng hàm tiền xử lý vào văn bản nhập vào
-# cleaned_text = clean_text(user_input, language)
-
-# # In văn bản sau khi đã được tiền xử lý
-# print("\nOriginal Text: ", user_input)
-# print("Cleaned Text: ", cleaned_text)
